@@ -1,6 +1,5 @@
 # Projbanque_RMI
-
-#!/bin/bash
+TP 2 RMI de M Buscaldi
 
 # Suppression des .class
 rm *.class
@@ -15,7 +14,7 @@ chmod 777 *
 javac Compte.java CompteException.java BanqueInterface.java BanqueImplement.java BanqueServer.java BanqueClient.java
 
 # Indiquer le CLASSPATH
-export CLASSPATH=./TP2/src
+export CLASSPATH=./TP2/src // Mettre le chemin absolu
 
 # Créer automatiquement les stub et skeleton
 rmic -keep BanqueImplement
