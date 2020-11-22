@@ -13,7 +13,7 @@ chmod 777 *
 javac Compte.java CompteException.java BanqueInterface.java BanqueImplement.java BanqueServer.java BanqueClient.java
 
 #Indiquer le CLASSPATH
-export CLASSPATH=/home/kevin/FERREIRA_TP1/TP2_projbanquermi_Bonus_TP1/src
+export CLASSPATH=./TP2/src
 
 # Créer automatiquement les stub et skeleton
 rmic -keep BanqueImplement
