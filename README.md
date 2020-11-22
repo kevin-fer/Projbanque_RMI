@@ -2,32 +2,32 @@
 
 #!/bin/bash
 
-#Suppression des .class
+# Suppression des .class
 rm *.class
 
-#Suppression du BanqueImplement 
+# Suppression du BanqueImplement 
 rm BanqueImplement_Stub.java
 
-#Donner les droits
+# Donner les droits
 chmod 777 * 
 
-#Compiler les fichiers nécéssaires pour le Server
+# Compiler les fichiers nécéssaires pour le Server
 javac Compte.java CompteException.java BanqueInterface.java BanqueImplement.java BanqueServer.java BanqueClient.java
 
-#Indiquer le CLASSPATH
+# Indiquer le CLASSPATH
 export CLASSPATH=./TP2/src
 
 # Créer automatiquement les stub et skeleton
 rmic -keep BanqueImplement
 
-#Lancer le serveur de noms Java
+# Lancer le serveur de noms Java
 rmiregistry &
 
-#Lancement du serveur 
+# Lancement du serveur 
 java -Djava.security.policy=client1.policy BanqueServer
 
-#Compiler les fichiers nécéssaires pour le Client
+# Compiler les fichiers nécéssaires pour le Client
 javac BanqueClient.java Compte.java
 
-#Lancement du client 
+# Lancement du client 
 java -Djava.security.policy=client1.policy BanqueClient
