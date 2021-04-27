@@ -7,9 +7,6 @@ rm *.class
 # Suppression du BanqueImplement 
 rm BanqueImplement_Stub.java
 
-# Donner les droits
-chmod 777 * 
-
 # Compiler les fichiers nécéssaires pour le Server
 javac Compte.java CompteException.java BanqueInterface.java BanqueImplement.java BanqueServer.java BanqueClient.java
 
